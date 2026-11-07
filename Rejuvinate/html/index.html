@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Code Converter</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">&lt;/&gt;</span>
+      <h1>AI Code Converter</h1>
+    </div>
+    <span class="badge">Powered by Gemini</span>
+  </header>
+
+  <main class="container">
+
+    <!-- MODE TABS -->
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-mode="convert" role="tab" type="button">Convert Code</button>
+      <button class="tab" data-mode="fix" role="tab" type="button">Fix / Update Code</button>
+    </div>
+    <p id="modeHint" class="hint">
+      Paste code in an old language or version and convert it to a new one.
+    </p>
+
+    <!-- EXAMPLES -->
+    <div class="chips">
+      <span class="chips-label">Try an example:</span>
+      <button class="chip" type="button" data-example="py2">Python 2 → 3</button>
+      <button class="chip" type="button" data-example="jquery">jQuery → Vanilla JS</button>
+      <button class="chip" type="button" data-example="js2py">JavaScript → Python</button>
+      <button class="chip" type="button" data-example="broken">Broken JS (fix it)</button>
+    </div>
+
+    <!-- LANGUAGES -->
+    <div class="row">
+      <div class="field">
+        <label for="sourceLang">Source language</label>
+        <select id="sourceLang"></select>
+      </div>
+      <div class="field" id="targetField">
+        <label for="targetLang">Convert to</label>
+        <select id="targetLang"></select>
+      </div>
+    </div>
+
+    <div class="field extra">
+      <label for="extraInstructions">Extra instructions (optional)</label>
+      <input id="extraInstructions" type="text"
+             placeholder="e.g. add comments, use async/await, keep it beginner friendly" />
+    </div>
+
+    <!-- EDITORS -->
+    <div class="panels">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Input code</h2>
+          <button id="clearBtn" class="btn small ghost" type="button">Clear</button>
+        </div>
+        <textarea id="inputCode" spellcheck="false"
+                  placeholder="Paste your old or broken code here..."></textarea>
+
+        <div id="errorField" class="field hidden">
+          <label for="errorMsg">Error message or what went wrong (optional)</label>
+          <textarea id="errorMsg" class="small-text" spellcheck="false"
+                    placeholder="e.g. TypeError: x is not a function (line 12)"></textarea>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Result</h2>
+          <button id="copyBtn" class="btn small" type="button" disabled>Copy</button>
+        </div>
+        <pre class="output"><code id="outputCode">Your updated code will appear here.</code></pre>
+        <div id="notes" class="notes hidden"></div>
+      </section>
+    </div>
+
+    <div class="actions">
+      <button id="convertBtn" class="btn primary big" type="button">Convert Code</button>
+      <span id="status" class="status"></span>
+      <span class="shortcut">Ctrl + Enter</span>
+    </div>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
