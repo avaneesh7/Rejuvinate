@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Code Converter – Home</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">
+      <span class="logo">&lt;/&gt;</span>
+      <h1>AI Code Converter</h1>
+    </a>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#languages">Languages</a>
+      <a class="btn primary small" href="index.html">Open Converter</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="badge">Powered by Gemini</span>
+    <h2>Convert and fix code <span class="grad">in seconds</span></h2>
+    <p class="lead">
+      Paste old code, another language, or something that just won't run.
+      Get clean, modern, working code back, with notes on what changed.
+    </p>
+    <div class="hero-actions">
+      <a class="btn primary big" href="index.html">Start Converting</a>
+      <a class="btn big" href="#how">See how it works</a>
+    </div>
+
+    <div class="demo">
+      <div class="demo-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="demo-title" id="demoTitle">Python 2 → Python 3</span>
+      </div>
+      <div class="demo-body">
+        <pre class="demo-code"><code id="demoBefore"></code></pre>
+        <div class="demo-arrow">→</div>
+        <pre class="demo-code good"><code id="demoAfter"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat"><strong data-count="30">0</strong><span>+ languages</span></div>
+    <div class="stat"><strong data-count="2">0</strong><span>modes: convert and fix</span></div>
+    <div class="stat"><strong data-count="1">0</strong><span>click to run</span></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <h2 class="section-title">Everything you need</h2>
+    <div class="grid">
+      <article class="card feature reveal">
+        <div class="icon">🔄</div>
+        <h3>Language conversion</h3>
+        <p>Translate code between dozens of languages while keeping the original logic.</p>
+      </article>
+      <article class="card feature reveal">
+        <div class="icon">🛠️</div>
+        <h3>Fix broken code</h3>
+        <p>Paste code and the error message. Get a working version and an explanation.</p>
+      </article>
+      <article class="card feature reveal">
+        <div class="icon">⬆️</div>
+        <h3>Modernize old code</h3>
+        <p>Replace deprecated APIs and outdated syntax, like Python 2 to 3 or jQuery to vanilla JS.</p>
+      </article>
+      <article class="card feature reveal">
+        <div class="icon">💬</div>
+        <h3>Custom instructions</h3>
+        <p>Ask for comments, async/await, or beginner-friendly output with your own prompt.</p>
+      </article>
+      <article class="card feature reveal">
+        <div class="icon">📝</div>
+        <h3>Clear notes</h3>
+        <p>Every result comes with a short list of what changed and what to install.</p>
+      </article>
+      <article class="card feature reveal">
+        <div class="icon">📋</div>
+        <h3>One-click copy</h3>
+        <p>Copy the finished code straight to your clipboard and keep working.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="section">
+    <h2 class="section-title">How it works</h2>
+    <div class="steps">
+      <div class="step reveal"><span class="num">1</span><h3>Paste your code</h3><p>Old, broken, or in the wrong language.</p></div>
+      <div class="step reveal"><span class="num">2</span><h3>Pick what you need</h3><p>Choose a target language or switch to Fix mode.</p></div>
+      <div class="step reveal"><span class="num">3</span><h3>Copy the result</h3><p>Get updated code plus notes, ready to use.</p></div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section id="languages" class="section">
+    <h2 class="section-title">Supported languages</h2>
+    <p class="hint center">Click a language to open the converter with it selected.</p>
+    <div id="langCloud" class="lang-cloud"></div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to convert your code?</h2>
+    <p>No signup. Paste, click, done.</p>
+    <a class="btn primary big" href="index.html">Open the Converter</a>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> AI Code Converter</span>
+    <span>Built with HTML, CSS, JS and Gemini</span>
+  </footer>
+
+  <script src="../js/home.js"></script>
+</body>
+</html>
